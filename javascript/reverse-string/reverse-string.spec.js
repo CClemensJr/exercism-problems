@@ -7,7 +7,7 @@ describe('ReverseString', () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest('a word', () => {
+  test('a word', () => {
     const expected = 'tobor';
     const actual = reverseString('robot');
     expect(actual).toEqual(expected);
