@@ -1,10 +1,9 @@
 export const reverseString = (str) => {
-  const strArr = str.split('');
-  const rts = [];
+  let rts = '';
 
-  strArr.forEach((char) => {
-    rts.unshift(char);
-  });
+  for (let i = str.length - 1; i >= 0; i--) {
+    rts += str[i];
+  }
 
-  return rts.join('');
+  return rts;
 };
