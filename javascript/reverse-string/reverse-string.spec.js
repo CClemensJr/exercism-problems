@@ -25,7 +25,7 @@ describe('ReverseString', () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest('a palindrome', () => {
+  test('a palindrome', () => {
     const expected = 'racecar';
     const actual = reverseString('racecar');
     expect(actual).toEqual(expected);
