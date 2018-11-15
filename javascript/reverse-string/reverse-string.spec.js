@@ -13,7 +13,7 @@ describe('ReverseString', () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest('a capitalized word', () => {
+  test('a capitalized word', () => {
     const expected = 'nemaR';
     const actual = reverseString('Ramen');
     expect(actual).toEqual(expected);
