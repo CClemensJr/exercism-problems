@@ -6,7 +6,7 @@ describe('twoFer()', () => {
     expect(twoFer(name)).toEqual('One for you, one for me.');
   });
 
-  xtest('a name given', () => {
+  test('a name given', () => {
     const name = 'Alice';
     expect(twoFer(name)).toEqual('One for Alice, one for me.');
   });
