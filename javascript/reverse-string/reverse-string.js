@@ -3,7 +3,7 @@ export const reverseString = (str) => {
   const rts = [];
 
   strArr.forEach((char) => {
-    rts.push(char);
+    rts.unshift(char);
   });
 
   return rts.join('');
