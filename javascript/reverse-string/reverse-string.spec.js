@@ -19,7 +19,7 @@ describe('ReverseString', () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest('a sentence with punctuation', () => {
+  test('a sentence with punctuation', () => {
     const expected = '!yrgnuh ma I';
     const actual = reverseString('I am hungry!');
     expect(actual).toEqual(expected);
