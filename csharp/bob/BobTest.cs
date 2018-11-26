@@ -64,8 +64,7 @@ public class BobTest
         Assert.Equal("Whoa, chill out!", Bob.Response("1, 2, 3 GO!"));
     }
 
-    // Failed
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void No_letters()
     {
         Assert.Equal("Whatever.", Bob.Response("1, 2, 3"));
