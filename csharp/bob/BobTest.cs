@@ -112,7 +112,7 @@ public class BobTest
         Assert.Equal("Fine. Be that way!", Bob.Response(""));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Prolonged_silence()
     {
         Assert.Equal("Fine. Be that way!", Bob.Response("          "));

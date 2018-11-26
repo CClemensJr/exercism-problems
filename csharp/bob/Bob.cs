@@ -8,8 +8,11 @@ public static class Bob
         string[] responses = {"Sure.", "Whoa, chill out!", "Calm down, I know what I'm doing!", "Fine. Be that way!", "Whatever."};
 
         string allCaps = statement.ToUpper();
-        string pattern = @"[a-zA-Z]+";
-        Match hasLetters = Regex.Match(statement, pattern);
+        string letterPattern = @"[a-zA-Z]+";
+        string whiteSpacePattern = @"\s*";
+
+        Match hasLetters = Regex.Match(statement, letterPattern);
+        Match hasWhiteSpaceOnly = Regex.Match(statement, whiteSpacePattern);
 
         if (hasLetters.Success)
         {
@@ -22,7 +25,7 @@ public static class Bob
         else if (!hasLetters.Success)
         {
             if (statement.EndsWith("?")) return responses[0];
-            if (statement == "") return responses[3];
+            if (hasWhiteSpaceOnly.Success) return responses[3];
 
             return responses[4];
         }
