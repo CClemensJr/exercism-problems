@@ -16,7 +16,7 @@ public class BobTest
         Assert.Equal("Whoa, chill out!", Bob.Response("WATCH OUT!"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting_gibberish()
     {
         Assert.Equal("Whoa, chill out!", Bob.Response("FCECDFCAAB"));
