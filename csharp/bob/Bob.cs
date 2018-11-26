@@ -9,7 +9,7 @@ public static class Bob
 
         string allCaps = statement.ToUpper();
         string letterPattern = @"[a-zA-Z]+";
-        string whiteSpacePattern = @"\s*";
+        string whiteSpacePattern = @"^\s*$";
 
         Match hasLetters = Regex.Match(statement, letterPattern);
         Match hasWhiteSpaceOnly = Regex.Match(statement, whiteSpacePattern);
@@ -22,15 +22,11 @@ public static class Bob
 
             return responses[4];
         }
-        else if (!hasLetters.Success)
+        else
         {
             if (statement.EndsWith("?")) return responses[0];
             if (hasWhiteSpaceOnly.Success) return responses[3];
 
-            return responses[4];
-        }
-        else
-        {
             return responses[4];
         }
     }
