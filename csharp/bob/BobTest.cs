@@ -46,7 +46,7 @@ public class BobTest
         Assert.Equal("Whatever.", Bob.Response("Let's go make out behind the gym!"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Using_acronyms_in_regular_speech()
     {
         Assert.Equal("Whatever.", Bob.Response("It's OK if you don't want to go to the DMV."));
