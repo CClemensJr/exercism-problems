@@ -16,13 +16,15 @@ public static class Bob
             if (statement == allCaps && statement.EndsWith("?")) return responses[2];
             if (statement.EndsWith("?")) return responses[0];
             if (statement == allCaps) return responses[1];
-            if (statement == " ") return responses[3];
 
             return responses[4];
         }
-        else if (!hasLetters.Success && statement.EndsWith("?"))
+        else if (!hasLetters.Success)
         {
-            return responses[0];
+            if (statement.EndsWith("?")) return responses[0];
+            if (statement == "") return responses[3];
+
+            return responses[4];
         }
         else
         {

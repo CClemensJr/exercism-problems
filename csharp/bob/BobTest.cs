@@ -106,8 +106,7 @@ public class BobTest
         Assert.Equal("Sure.", Bob.Response("Wait! Hang on. Are you going to be OK?"));
     }
 
-    // Failed
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Silence()
     {
         Assert.Equal("Fine. Be that way!", Bob.Response(""));
