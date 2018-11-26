@@ -118,7 +118,7 @@ public class BobTest
         Assert.Equal("Fine. Be that way!", Bob.Response("          "));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Alternate_silence()
     {
         Assert.Equal("Fine. Be that way!", Bob.Response("\t\t\t\t\t\t\t\t\t\t"));
