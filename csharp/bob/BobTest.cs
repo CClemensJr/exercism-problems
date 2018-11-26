@@ -94,7 +94,7 @@ public class BobTest
         Assert.Equal("Whatever.", Bob.Response("Ending with ? means a question."));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Non_letters_with_question()
     {
         Assert.Equal("Sure.", Bob.Response(":) ?"));
