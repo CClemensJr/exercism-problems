@@ -34,7 +34,7 @@ public class BobTest
         Assert.Equal("Sure.", Bob.Response("You are, what, like 15?"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Asking_gibberish()
     {
         Assert.Equal("Sure.", Bob.Response("fffbbcbeab?"));
