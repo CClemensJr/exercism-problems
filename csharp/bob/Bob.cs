@@ -20,6 +20,10 @@ public static class Bob
 
             return responses[4];
         }
+        else if (!hasLetters.Success && statement.EndsWith("?"))
+        {
+            return responses[0];
+        }
         else
         {
             return responses[4];

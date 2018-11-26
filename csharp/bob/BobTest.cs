@@ -70,7 +70,7 @@ public class BobTest
         Assert.Equal("Whatever.", Bob.Response("1, 2, 3"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Question_with_no_letters()
     {
         Assert.Equal("Sure.", Bob.Response("4?"));
