@@ -6,18 +6,21 @@ public static class Bob
     public static string Response(string statement)
     {
         string[] responses = {"Sure.", "Whoa, chill out!", "Calm down, I know what I'm doing!", "Fine. Be that way!", "Whatever."};
+        char[] trimmings = {' '};
 
         string allCaps = statement.ToUpper();
+        string trimString = statement.TrimEnd(trimmings);
+
         string letterPattern = @"[a-zA-Z]+";
-        string whiteSpacePattern = @"^\s*$";
+        string allWhiteSpacePattern = @"^\s*$";
 
         Match hasLetters = Regex.Match(statement, letterPattern);
-        Match hasWhiteSpaceOnly = Regex.Match(statement, whiteSpacePattern);
+        Match hasWhiteSpaceOnly = Regex.Match(statement, allWhiteSpacePattern);
 
         if (hasLetters.Success)
         {
             if (statement == allCaps && statement.EndsWith("?")) return responses[2];
-            if (statement.EndsWith("?")) return responses[0];
+            if (trimString.EndsWith("?")) return responses[0];
             if (statement == allCaps) return responses[1];
 
             return responses[4];

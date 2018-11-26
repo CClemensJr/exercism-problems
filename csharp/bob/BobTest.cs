@@ -136,15 +136,13 @@ public class BobTest
         Assert.Equal("Whatever.", Bob.Response("         hmmmmmmm..."));
     }
 
-    // Failed
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Ending_with_whitespace()
     {
         Assert.Equal("Sure.", Bob.Response("Okay if like my  spacebar  quite a bit?   "));
     }
 
-    // Failed
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Other_whitespace()
     {
         Assert.Equal("Fine. Be that way!", Bob.Response("\n\r \t"));
